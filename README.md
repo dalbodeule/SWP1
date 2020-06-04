@@ -1,1 +1,1 @@
-20203153 JinU Choi    Kookmin Univ. SW
+20203153 JinU Choi  Kookmin Univ. SW
