@@ -7,11 +7,11 @@ def application(environ, start_response):
     a = d.get('a', [''])[0]
     b = d.get('b', [''])[0]
 
-    if '' in [a,b]:
-        a, b = [0, 0]
-    else:
+    try:
         a, b = [int(a), int(b)]
-    
+    except ValueError:
+        a, b = [0, 0]
+
     response_body = html.format(valA = a, valB = b, valAdd = a+b, valMul=a*b)
 
     start_response('200 OK', [
